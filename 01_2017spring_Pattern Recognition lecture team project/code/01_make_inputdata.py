@@ -4,7 +4,7 @@ import nltk
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from collections import Counter
-from nltk.stem.porter import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
 from stop_words import get_stop_words
 import pickle
@@ -46,27 +46,28 @@ tok_economic = tokenize(economic_corpus)
 tok_oshumed = tokenize(oshumed_corpus)
 tok_reuter = tokenize(reuter_corpus)
 
-### Stemming
+### Lemmatize
 # 오류나는 행들이 조금 있음
-p_stemmer = PorterStemmer()
-def stem(data):
+lemmatizer = WordNetLemmatizer()
+def lemma(data):
     tmp = []
     for i in range(len(data)):
         if i % 100:
             print(i)
         doc = data[i]
         try:
-            tmp.append([p_stemmer.stem(word) for word in doc])
+            tmp.append([lemmatizer.lemmatize(word) for word in doc])
         except IndexError:
             print('IndexError')
             pass
     return tmp
+Lemma_sonata = lemma(tok_sonata)
 economic_stem = stem(tok_economic) # 2개 차이가 난다. (4871, 5770)이 이상한 데이터
 oshumed_stem = stem(tok_oshumed) # 15개 차이
 reuter_stem = stem(tok_reuter) # 차이 없음
 
 
-### stopwords
+### stopwords elemination
 en_stop = get_stop_words('en')
 def removeStopwords(data):
     i=0
