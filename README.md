@@ -19,5 +19,13 @@ text mining codes (POS-tagging, embedding, parsing, modeling ...)
 * document
   * [Team 5]_Final_Report.pdf: 최종 과제 결과물로 제출한 파일
 
+## 02_nltk_parser
+* nltk_parsingTree_visualize.py
+* nltk에서 제공하는 Stanford parser를 이용하기 위한 코드입니다.
+* 이것을 사용하기 위해서는 다운받을 것들과 설정할 사항이 많습니다.
+  * java 환경 변수 설정, nltk tool 환경변수 설정(CLASSPATH, STANFORD_MODEL)
+  * englishPCFG.ser.gz 및 stanford-english-corenlp-2017-06-09-models.jar 경로에 넣어주기
+* nltk에서 제공하는 paser로 stanford의 parser를 이용한 예시 코드이며, 다른 여러 parser들도 연습해 볼 계획입니다.
+* 제일 아래에는 parsing tree를 시각화해서 보는 부분이 있습니다.
 
 
