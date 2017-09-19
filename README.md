@@ -10,8 +10,8 @@ text mining codes (POS-tagging, embedding, parsing, modeling ...)
   * 02_model.py: 분류모형 적합(Naïve Bayesian, Decision Tree, simple Ensemble) 및 성능 비교
 * data
   * economic_news_article
-  * ohsumed
-  * reuter
+  * ohsumed (용량 문제로 압축해서 업로드)
+  * reuter
   * TOTAL: output이 저장될 폴더. 코드를 돌리면 이 폴더에 output이 저장된다.
 * document
   * [Team 5]_Final_Report.pdf: 최종 과제 결과물로 제출한 파일
