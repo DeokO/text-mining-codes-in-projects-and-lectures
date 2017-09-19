@@ -67,7 +67,7 @@ oshumed_stem = stem(tok_oshumed) # 15개 차이
 reuter_stem = stem(tok_reuter) # 차이 없음
 
 
-### stopwords elemination
+### stopwords elimination
 en_stop = get_stop_words('en')
 def removeStopwords(data):
     i=0
